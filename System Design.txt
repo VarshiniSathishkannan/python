@@ -109,3 +109,45 @@ CAP theorem
 
 Message queues 
 
+Common practices:
+
+- Index DBs to optimize reads
+- Shard SQL for horizontal scaling
+- Auto-scale to handle traffic spikes
+- Use CDNs to reduce global latency
+- No perfect solution—only trade-offs
+- Assume failures—build fault tolerance
+- Async processing for non-urgent tasks
+- Write-through cache for write-heavy apps
+- Heartbeats & health checks detect failures
+- Circuit breakers prevent cascading failures
+- Denormalize DBs for read-heavy workloads
+- Prefer microservices over monoliths for scale
+- Read-through cache boosts read-heavy apps
+- Event-driven architecture decouples components
+- Avoid over-engineering—add features when needed
+- Use API versioning to manage backward compatibility
+- Optimize database queries to avoid N+1 query problems
+- Use distributed tracing for monitoring and debugging microservices
+- Apply schema evolution strategies to handle DB migrations smoothly
+- Leverage gRPC for efficient, high-performance service communication
+- Implement database connection pooling to optimize resource usage
+- Monitor and log everything—observability is key for debugging
+- Design for eventual consistency in distributed systems
+- Define functional & non-functional requirements first
+- Replication & redundancy enhance fault tolerance
+- Use feature flags for safe and controlled rollouts
+- Rate limiting prevents overload & DoS attacks
+- Websockets enable real-time communication
+- SQL for structured data & ACID compliance
+- Message queues enable async processing
+- Load balancers improve traffic distribution
+- Partition & shard data for large datasets
+- Data lakes & warehouses for analytics
+- API gateways simplify microservices
+- Prefer horizontal scaling for growth
+- Blob storage is best for media files
+- Idempotency simplifies retry logic
+- NoSQL suits unstructured data
+- Design clear, secure APIs
+
