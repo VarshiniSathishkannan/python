@@ -2,7 +2,7 @@ System Design
 
 Server <-> End user
 
-Horizontal scaling Vs Vertical Scaling
+# Horizontal scaling Vs Vertical Scaling
 
 1. Horizontal scaling:
 Buy more machines
@@ -21,7 +21,7 @@ inter process communication
 data consistent
 hardware limit
 
-Start with building a system:
+# Start with building a system:
 
 1. optimise process and increase throughput using the same resource - max utilisation (Vertical scaling)
 2. run process during non peak hours - preprocessing and cron jobs
@@ -29,22 +29,22 @@ Start with building a system:
 4. buy more resources - Horizontal scaling
 
 
-Microservice architecture 
+# Microservice architecture 
 
-Distributed system - (Partitions)
+# Distributed system - (Partitions)
 
-Load Balancer
+# Load Balancer
 
-Decoupling - (Extensible)
+# Decoupling - (Extensible)
 
-Logging and metrics 
+# Logging and metrics 
 
-High Level and Low level Design: 
+# High Level and Low level Design: 
 
 High level is system design
 low level is coding
 
-Consistent Hashing:
+# Consistent Hashing:
 
 If there are N-servers and M-End users, We need to distribute it equally to all the servers
 
@@ -54,52 +54,49 @@ suppose 10 servers and 100 users...then user request will be given to the server
 
 But in this case, suppose we are adding a new server, then each server will lose around 1 user. In real world, not always different user logs in, if suppose 1 user logs in 20 times, then it is better to cache the result. but while adding the server, the hash result changes and the result will be fetched from another server and cache becomes useless. also the delay would be signifant
 
+# CDN - Content Delviery Network
 
-
-CDN - Content Delviery Network
-
-Caching
+# Caching
 
 L1, L2 and L3 CPU cache
 
-IP / TCP 
+# IP / TCP 
 
-DNS - Domain Name Service
+# DNS - Domain Name Service
 
 DNS Registrar
 
-Application Layer protocol - https://
+# Application Layer protocol - https://
 
-Client/Server model
+# Client/Server model
 
-Rest API - Application Programming Interface
+# Rest API - Application Programming Interface
 JSON
 
 Request 
 Response
 
-GraphQl
+# GraphQl
 gRPC - Protocol buffers - serialized into binary, lot faster than RestApi
 
-
-Web Sockets - Take an example of Messaging apps
+# Web Sockets - Take an example of Messaging apps
 
 if we use http, we need to keep on polling the senders for any new messages. but in case of websockets, it supports bidirectional communication
 
 Database - For more efficient storage and retrival 
 
-SQL
+# SQL
 
-B-Tree datastructure 
+# B-Tree datastructure 
 
-ACID compliance where 
+# ACID compliance 
 A - All or nothing
 C - Consistency - relationship across multiple tables 
 I - No two transaction interfere with each other 
 D - Durability - Even if system restarts, the data will be there
 
 
-NoSql
+# NoSql
 
 No relations
 Sharding for horizontal scaling 
@@ -107,7 +104,7 @@ replication for redundancy
 leader and follower
 CAP theorem 
 
-Message queues 
+# Message queues 
 
 Common practices:
 
